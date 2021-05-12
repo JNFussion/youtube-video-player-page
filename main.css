@@ -47,10 +47,25 @@ table {
 	border-spacing: 0;
 }
 
-/* END RESET */
+
+/* GENERAL */
+
+.is-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-photo-rounded{
+  border-radius: 50%;;
+}
+
+
+/* NAVBAR */
 
 nav{
   position: fixed;
+  top: 0;
   height: 3.5em;
   width: 100%;
   display: grid;
@@ -58,12 +73,30 @@ nav{
   background-color: #262626;
   color: white;
 }
-aside > a{
+a{
   text-decoration: none;
+}
+.nav-start{
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-brand{
+  display: flex;
+  justify-content: center;
 }
 #logo-youtube{
   display: block;
   height: 1.25em;
+}
+
+#homepage-link{
+  margin: auto;
+}
+
+/* SEARCH BAR AND BUTTONS*/
+
+.nav-search{
+  width: 50%;
 }
 .input-search{
   width: 80%;
@@ -81,42 +114,12 @@ aside > a{
   opacity: 1; /* Firefox */
 }
 
-.nav-start{
-  display: flex;
-  justify-content: space-evenly;
-}
-.nav-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav-end{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.nav-sidebar{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-brand{
-  display: flex;
-  justify-content: center;
-}
-.nav-search{
-  width: 50%;
-}
 #search-form{
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-#homepage-link{
-  margin: auto;
-}
 #btn-search{
   background-color:#404040;
   border: #404040;
@@ -129,6 +132,15 @@ aside > a{
   padding-left: .75em;
   margin: auto;
 }
+
+/* SIGN IN BUTTON AND SETTINGS BUTTONS */
+
+.nav-end{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 #btn-login{
   height: 100%;
   border: 1px solid hsl(204, 86%, 53%);
@@ -146,41 +158,30 @@ aside > a{
 #form-login{
   height: 75%;
 }
+
+
+/* CONTENT OF PAGE */
+
 .main-content{
-  position: relative;
-  top: 3.5em;
   display: flex;
-  height: 100vh;
+  height: 200vh;
+  margin-top: 3.5em;;
   padding-top: 1.5em;
-  background-color: aqua;
+  background-color: #1a1a1a;
 }
+
+/* LIST RECOMENDED VIDEOS */
+
 .recommended-videos{
-  background-color: chartreuse;
   padding-left: 2em;
   width: 21%;
 }
 
-#video-content{
-  display: flex;
-  flex-direction: column;
-  background-color: chocolate;
-  width: 72%;
-}
-.video-frame{
-  height: 720px;
-  width: 1280px;
-  background-color: cornflowerblue;
-}
 .video-list-item{
-  background-color: crimson;
   display: flex;
   margin-bottom: .75em;
 }
-.video-info{
-  background-color: darkcyan;
-  color: white;
-  margin-left: .5em;
-}
+
 .thumbnail-container{
   width: 160px;
   height: 120px;
@@ -189,8 +190,186 @@ aside > a{
  width: auto;
  height: 100%;
 }
+
+.video-info{
+  color: white;
+  margin-left: .5em;
+}
 #extra-info{
   margin-top: .75em;
   font-size: .75em;
   line-height: 1.5em;
+}
+/* CONTENT OF THE VIDEOS. FRAME, INFO AND COMMENTS */
+
+#video-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 72%;
+}
+.video-frame{
+  height: 720px;
+  width: 1280px;
+}
+
+/* TITLE OF THE VIDEO */
+
+.video-stats{
+  width: 1280px;
+  margin-top: 1em;
+  border-bottom: 1px solid grey;
+}
+.video-stats #title{
+  color: white;
+  margin-top: .25em;
+}
+.hashtags{
+  font-size: .75em;
+}
+.hashtags > a{
+  color: hsl(204, 86%, 53%);
+}
+.stats{
+  margin-top: 1em;
+  display: flex;
+  justify-content: end;
+  margin-bottom: .5em;
+  color: #cccccc;
+}
+.views-date{
+  margin-right: auto;
+  font-size: .85em;
+}
+.share-link > a{
+  margin: .5em;
+  color: inherit;
+}
+.share-icons{
+  margin-right: .25em;
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+
+/* VIDEO DESCRIPTION */
+
+.video-description{
+  margin-top: 1em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid grey;
+  width: 1280px;
+}
+.video-description > p{
+  margin: 1em 0 2em 4em;
+  color: white;
+}
+.video-description > p > a{
+  color: hsl(204, 86%, 53%);
+}
+.start-description{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.info-channel{
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.info-channel > p{
+  margin-left: 1em;
+  color: grey;
+}
+#link-channel{
+  font-size: 1em;
+  color: white;
+}
+#sub-count{
+  font-size: .75em;
+}
+#sub-button{
+  padding: .5em 1em;
+  font-size: 1.05em;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  border: red 1px solid;
+}
+#btn-expand{
+  margin-left: 4.5em;
+  background-color: inherit;
+  border: none;
+  color: #ccc;
+}
+
+/* COMMENT SECTION */
+
+.comment-content{
+  margin-top: 1em;
+  width: 1280px;
+}
+.comment-info{
+  display: flex;
+  color: white;
+}
+.comment-info > span{
+  margin-left: 2em;
+  color: #ccc;
+}
+.comment-form{
+  display: flex;
+  margin-top: 1em;
+}
+.comment-form > form{
+  margin-left: 1em;
+  width: 100%;
+}
+
+#comment-input{
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  background-color: inherit;
+  color: #ccc;
+}
+
+/* SINGLE COMMENT */
+
+.comment-container{
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  color: white;
+}
+.comment-container > div{
+  margin-left: 1em;
+}
+.comment-user{
+  margin-bottom: .5em;
+}
+.comment-user :only-child {
+  font-size: .75em;
+  color: #ccc;
+}
+.comment-body > div{
+  margin-top: 1em;
+}
+
+.comment-body > div > a{
+  margin-right: 1em;
+  color: #ccc;
+  font-size: .85em;
+}
+.comment-expand{
+  margin-top: .5em;
+  margin-left: 6em;
+  font-size: .80em;
+  vertical-align: middle;
+}
+.comment-expand > a{
+  color: #ccc;
+}
+.fa-sort-down{
+  font-size: 1.25em;
+  padding-right: 1em
 }

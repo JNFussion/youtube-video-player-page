@@ -8,7 +8,7 @@
   <body>
     <nav>
       <div class="nav-start">
-        <div class="nav-sidebar">
+        <div class="is-centered">
           <i class="fas fa-bars"></i>
         </div>
         <div class="nav-brand">
@@ -17,10 +17,10 @@
           </a>
         </div>
       </div>
-      <div class="nav-center">
+      <div class="is-centered">
         <div class="nav-search">
           <form id="search-form" action="">
-            <input class="input-search" type="text" placeholder="Buscar">
+            <input class="input-search" type="text" placeholder="Search">
             <button id="btn-search"><i class="fas fa-search"></i></button>
             <i id="micro-icon" class="fas fa-microphone"></i>
           </form>
@@ -30,33 +30,33 @@
         <i class="fas fa-th"></i>
         <i class="fas fa-ellipsis-v"></i>
         <form id="form-login" action="https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Des%26next%3D%252Fwatch%253Fv%253DdQw4w9WgXcQ&hl=es&ec=65620">
-          <button id="btn-login" type="submit"><i id="user-icon" class="fas fa-user-circle"></i>INICIAR SESION</button>
+          <button id="btn-login" type="submit"><i id="user-icon" class="fas fa-user-circle"></i>Sign in</button>
         </form> 
       </div>
     </nav>
     <section class="main-content">
       <section id="video-content">
         <div class="video-frame">
-
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <article>
+        <article class="video-stats">
           <div>
             <p class="hashtags">
               <a href="">#RickAstley</a>
               <a href="">#NeverGonnaGiveYouUp</a>
               <a href="">#DancePop</a>
             </p>
-            <p>
+            <p id="title">
               Rick Astley - Never Gonna Give You Up (Video)
             </p>
-            <div>
-              <p>940.938.105 views &centerdot; 25 oct 2009</p>
-              <div>
-                <a href=""><i class="fas fa-thumbs-up"></i>9,6 M</a>
-                <a href=""><i class="fas fa-thumbs-down"></i> 280.646</a>
-                <a href=""><i class="fas fa-share"></i>SHARE</a>
-                <a href=""><i class="fas fa-plus"></i>SAVE</a>
-                <a href=""><i class="fas fa-ellipsis-h"></i></a>
+            <div class="stats">
+              <p class="views-date">940.938.105 views &centerdot; 25 oct 2009</p>
+              <div class="share-link">
+                <a href=""><i class="fas fa-thumbs-up share-icons"></i>9,6 M</a>
+                <a href=""><i class="fas fa-thumbs-down share-icons"></i> 280.646</a>
+                <a href=""><i class="fas fa-share share-icons"></i>SHARE</a>
+                <a href=""><i class="fas fa-plus share-icons"></i>SAVE</a>
+                <a href=""><i class="fas fa-ellipsis-h share-icons"></i></a>
               </div>
             </div>
           </div>
@@ -64,7 +64,78 @@
 
           </div>
         </article>
+        <article class="video-description">
+          <div class="start-description">
+            <div class="info-channel">
+              <img src="https://yt3.ggpht.com/ytc/AAUvwni36SveDisR-vOAmmklBfJxnnjuRG3ihzfrwEfORA=s48-c-k-c0x00ffffff-no-rj-mo" alt="user profile photo" class="is-photo-rounded">
+              <p>
+                <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" id="link-channel">Official Rick Astley</a> &#x1d160; <br>
+                <span id="sub-count">2.12M subscribers</span>
+              </p>
+            </div>
+            <button id="sub-button">SUBSCRIBE</button>
+          </div>
+          <p>
+            Rick Astley's official music video for “Never Gonna Give You Up”<br>
+            Listen to Rick Astley: <a href="https://RickAstley.lnk.to/_listenYD​">https://RickAstley.lnk.to/_listenYD​</a>
+          </p>
+          <button id="btn-expand">SHOW MORE</button>
+        </article>
+        <section class="comment-content">
+          <div class="comment-info">
+            <p>9.999.999 comments</p>
+            <span>
+              <span class="fa-rotate-270" style="display: inline-block;">
+                <i class="fas fa-signal fa-flip-vertical"></i>
+              </span>
+              SORT BY
+            </span>
+          </div>
+          <div class="comment-form">
+            <img src="https://yt3.ggpht.com/ytc/AAUvwni36SveDisR-vOAmmklBfJxnnjuRG3ihzfrwEfORA=s48-c-k-c0x00ffffff-no-rj-mo" alt="user profile photo" class="is-photo-rounded">
+            <form action="">
+              <input type="text" name="" id="comment-input", placeholder="Add a public comment...">
+            </form>
+          </div>
+          <div>
+            <article>
+              <div class="comment-container">
+                <img src="https://yt3.ggpht.com/ytc/AAUvwni36SveDisR-vOAmmklBfJxnnjuRG3ihzfrwEfORA=s48-c-k-c0x00ffffff-no-rj-mo" alt="user profile photo" class="is-photo-rounded">
+                <div class="comment-body">
+                  <p class="comment-user">Username <span>10 days ago</span></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis. </p>
+                  <div class="comment-likes">
+                    <a href=""><i class="fas fa-thumbs-up"> 100K</i></a>
+                    <a href=""><i class="fas fa-thumbs-down"></i></a>
+                    <a href="">REPLY</a>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-expand">
+                <a href=""><i class="fas fa-sort-down"></i>View 10 replies</a>
+              </div>
+            </article>
+            <article>
+              <div class="comment-container">
+                <img src="https://yt3.ggpht.com/ytc/AAUvwni36SveDisR-vOAmmklBfJxnnjuRG3ihzfrwEfORA=s48-c-k-c0x00ffffff-no-rj-mo" alt="user profile photo" class="profile-photo">
+                <div class="comment-body">
+                  <p class="comment-user">Username <span>10 days ago</span></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis. </p>
+                  <div class="comment-likes">
+                    <a href=""><i class="fas fa-thumbs-up"> 100K</i></a>
+                    <a href=""><i class="fas fa-thumbs-down"></i></a>
+                    <a href="">REPLY</a>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-expand">
+                <a href=""><i class="fas fa-sort-down"></i>View 10 replies</a>
+              </div>
+            </article>
+          </div>
+          </section>
       </section>
+      
       
       <aside class="recommended-videos">
         <a href="https://www.youtube.com/watch?v=LDU_Txk06tM">
@@ -73,7 +144,7 @@
               <img class="thumbnail" src="https://img.youtube.com/vi/LDU_Txk06tM/0.jpg" alt="thumbnail recommended video">
             </figure>
             <div class="video-info">
-              <p id="title">
+              <p>
                 <strong> Noisestorm - Crab Rave [Monstercat Release]</strong>
               </p>
               <p id="extra-info">
@@ -85,14 +156,13 @@
           </article>
         </a>
         
-        
         <a href="https://www.youtube.com/watch?v=LDU_Txk06tM">
           <article class="video-list-item">
             <figure class="thumbnail-container">
               <img class="thumbnail" src="https://img.youtube.com/vi/LDU_Txk06tM/0.jpg" alt="thumbnail recommended video">
             </figure>
             <div class="video-info">
-              <p id="title">
+              <p>
                 <strong> Noisestorm - Crab Rave [Monstercat Release]</strong>
               </p>
               <p id="extra-info">
